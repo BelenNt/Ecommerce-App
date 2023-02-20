@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "45607071-4b3a-458b-89e4-6fc81534faae",
+		"name": "Eccommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25936285"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Agregar usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Belen\",\r\n    \"apellido\": \"Navas\",\r\n    \"edad\":\"26\",\r\n    \"password\": \"123\",\r\n    \"email\": \"belen.navas@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista usuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Belen\",\r\n    \"apellido\": \"Navas\",\r\n    \"password\": \"123\",\r\n    \"email\": \"belen.navas@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/usuarios/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjNiOGZiZTNkZjRhNGNlNDUyZTMxNmZhIiwiZnVsbF9uYW1lIjoiSmVzdXMgQ2FyZGVuYXMiLCJlbWFpbCI6Implc3VzLmNhcmRlbmFzLmRAZ21haWwuY29tIiwiYWN0aXZlIjp0cnVlfSwiaWF0IjoxNjczMDY3ODUyLCJleHAiOjE2NzMwOTY2NTJ9.t-lZcxSoWWosEDSK58Dvh7xOKWn6tv9TpBcRLqxVmaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Belen\",\r\n    \"apellido\": \"Navas\",\r\n    \"email\": \"belen.navas@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/usuarios/63b8fbe3df4a4ce452e316fa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"63b8fbe3df4a4ce452e316fa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjNiOGZiZTNkZjRhNGNlNDUyZTMxNmZhIiwiZnVsbF9uYW1lIjoiSmVzdXMgQ2FyZGVuYXMiLCJlbWFpbCI6Implc3VzLmNhcmRlbmFzLmRAZ21haWwuY29tIiwiYWN0aXZlIjp0cnVlfSwiaWF0IjoxNjczMDY3ODUyLCJleHAiOjE2NzMwOTY2NTJ9.t-lZcxSoWWosEDSK58Dvh7xOKWn6tv9TpBcRLqxVmaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/usuarios/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"123\",\r\n    \"email\": \"belen.navas@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1//auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "List product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jesus\",\r\n    \"last_name\": \"Cardenas\",\r\n    \"password\": \"123\",\r\n    \"email\": \"jesus.cardenas.d@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "63b9035d53fe17c75f3cc8d4",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjNiOGZiZTNkZjRhNGNlNDUyZTMxNmZhIiwiZnVsbF9uYW1lIjoiSmVzdXMgQ2FyZGVuYXMiLCJlbWFpbCI6Implc3VzLmNhcmRlbmFzLmRAZ21haWwuY29tIiwiYWN0aXZlIjp0cnVlfSwiaWF0IjoxNjczMDY3ODUyLCJleHAiOjE2NzMwOTY2NTJ9.t-lZcxSoWWosEDSK58Dvh7xOKWn6tv9TpBcRLqxVmaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test Product\",\r\n    \"price\": 50.99,\r\n    \"description\": \"Ejemplo de descripcion\",\r\n    \"stock\": 50,\r\n    \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "63b9035d53fe17c75f3cc8d4",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjNiOGZiZTNkZjRhNGNlNDUyZTMxNmZhIiwiZnVsbF9uYW1lIjoiSmVzdXMgQ2FyZGVuYXMiLCJlbWFpbCI6Implc3VzLmNhcmRlbmFzLmRAZ21haWwuY29tIiwiYWN0aXZlIjp0cnVlfSwiaWF0IjoxNjczMDY3ODUyLCJleHAiOjE2NzMwOTY2NTJ9.t-lZcxSoWWosEDSK58Dvh7xOKWn6tv9TpBcRLqxVmaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test cafe\",\r\n    \"price\": 50.99,\r\n    \"description\": \"Ejemplo de descripcion\",\r\n    \"stock\": 50,\r\n    \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/products/63b90914afd98379e361fb1d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"63b90914afd98379e361fb1d"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "63b9035d53fe17c75f3cc8d4",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjNiOGZiZTNkZjRhNGNlNDUyZTMxNmZhIiwiZnVsbF9uYW1lIjoiSmVzdXMgQ2FyZGVuYXMiLCJlbWFpbCI6Implc3VzLmNhcmRlbmFzLmRAZ21haWwuY29tIiwiYWN0aXZlIjp0cnVlfSwiaWF0IjoxNjczMDY3ODUyLCJleHAiOjE2NzMwOTY2NTJ9.t-lZcxSoWWosEDSK58Dvh7xOKWn6tv9TpBcRLqxVmaM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/v1/products/63b90914afd98379e361fb1d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"63b90914afd98379e361fb1d"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "63b9035d53fe17c75f3cc8d4",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
